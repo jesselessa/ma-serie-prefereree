@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crown</title>
+    <!-- Lien icône de favori -->
+    <link rel="icon" type="image/png" href="./images/crown.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Lien Font-Awesome -->
+    <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+    <!-------------- BOUTON ASCENSEUR ------------>
+    <i onclick="topFunction()" id="button-top" title="aller en haut" class="fas fa-chevron-circle-up"></i>
+ 
+    <!-- BOÎTE ACCUEIL -->
+    <header>
+        <h2>THE CROWN</h2> 
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li class="navbar-link first"><a href="#synopsis">Synopsis</a></li>
+                <li class="navbar-link second"><a href="#personnages">Personnages</a></li>
+                <li class="navbar-link third"><a href="#saisons">Saisons</a></li>
+                <li class="navbar-link fourth"><a href="#contact">Contact</a></li>                
+            </ul>                      
+            <!-- Bouton burger -->
+            <button class="burger">
+                <span class="bar"></span>              
+            </button> 
+        </nav>
+        <h1><span>THE</span><br>CROWN</h1>
+    </header>
+    <!-- FIN  BOÎTE ACCUEIL -->
+
+    <!-- MAIN -->
+    <main>
+        <!-- BOÎTE SYNOPSIS -->
+        <section id="synopsis">
+            <h2 >SYNOPSIS</h2>        
+            <p>The Crown est une fiction historique retraçant la vie de la reine Elizabeth II, depuis son arrivée sur le trône britannique jusqu'à nos jours, entre conflits personnels, intrigues politiques et événements qui ont marqué la seconde moitié du XXe siècle.</p>        
+        </section> 
+        <!-- FIN BOÎTE SYNOPSIS -->
+
+        <!-- BOÎTE PERSONNAGES -->
+        <section id="personnages">
+            <h2>PERSONNAGES</h2>        
+                <table>
+                    <tr>
+                        <td class="portrait">
+                        <img src="./images/photo elizabeth.jpg" alt="elizabeth">
+                        </td>
+                        <td class="nomPerso">Elizabeth</td>
+                        <td class="descriptionPerso">Elizabeth II est la monarque de l'empire colonial britannique. Elle accède au trône à l'âge de 25 ans à la mort de son père, le roi George VI.</td>
+                    </tr>
+                    <tr>
+                        <td class="portrait">
+                        <img src="./images/photo philip.jpg" alt="philip">
+                        </td>
+                        <td class="nomPerso">Philip Mountbatten</td>
+                     <td class="descriptionPerso">Philippe Mountbatten est le mari de la reine Elizabeth.</td>
+                    </tr>
+                    <tr>
+                        <td class="portrait">
+                            <img src="./images/photo margaret.png"  alt="margaret">
+                        </td>
+                        <td class="nomPerso">Margaret</td>
+                        <td class="descriptionPerso">La princesse Margaret est la sœur cadette de la reine Elizabeth.</td>
+                    </tr>
+                    <tr>
+                        <td class="portrait">
+                            <img src="./images/photo louis.jpg" alt="louis">
+                        </td>
+                     <td class="nomPerso">Louis Mountbatten</td>
+                        <td class="descriptionPerso">Louis Mountbatten est l'oncle ambitieux de Philip, dont il est le mentor.</td>
+                    </tr>
+                </table>
+        </section>
+        <!-- FIN BOÎTE PERSONNAGES -->
+
+        <!-- BOÎTE SAISONS -->
+        <section id="saisons">
+            <h2>SAISONS</h2>
+            <div class="captures">
+                <div class="saison">
+                    <figcaption>Saison 1</figcaption>
+                    <iframe src="https://www.youtube.com/embed/JWtnJjn6ng0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>     
+                <div class="saison">
+                    <figcaption>Saison 2</figcaption>
+                    <iframe src="https://www.youtube.com/embed/k15O_eBfUuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>    
+                <div class="saison">
+                    <figcaption>Saison 3</figcaption>
+                    <iframe src="https://www.youtube.com/embed/K_TE8yi58S8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="saison">
+                    <figcaption>Saison 4</figcaption>
+                    <iframe src="https://www.youtube.com/embed/OiXEpminPms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> 
+            </div>
+        </section>       
+        <!-- FIN BOÎTE SAISONS  -->
+   
+        <!-- BOÎTE CONTACT -->
+        <section id="contact">        
+            <h2 >Nous contacter</h2>        
+            <form action="" name="">
+                    <input class="nom" type="text" name="nom" placeholder="Votre nom">         
+                    <input class="mail" type="email" name="email" placeholder="Votre email">
+                    <textarea name="zone de texte" id="" cols="30" rows="10" placeholder="Votre message">Votre message</textarea>
+                    <input class="envoi" type="submit" value="Envoyer">
+            </form> 
+                      
+        </section>
+        <!-- FIN BOÎTE CONTACT-->
+    </main>
+    <!------- FIN MAIN -------->
+            
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="copyright">&copy 2021, Netflix Inc. - Tous droits réservés</p>
+        <p><a href="https://www.netflix.com/fr/title/80025678" target="_blank">Site officiel</a></p>
+    </footer>
+    
+    <script src="./script.js"></script>
+
+</body>
+
+</html>  

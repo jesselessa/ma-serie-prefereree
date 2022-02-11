@@ -1,0 +1,396 @@
+/* GENERALITES */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    /* taille par défaut navifateurs web = 16px */
+    /* 10px = 62.5 % * 16px = 1rem */
+    font-size: 62.5%;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+/* Font-family et font-size par défaut */
+@font-face {
+    font-family: "Cardo bold", serif;
+    src: url("../police/Cardo-Bold.ttf");
+}
+@font-face {
+    font-family: "Cardo regular", serif;
+    src: url("../police/Cardo-Regular.ttf");
+}
+@font-face {
+    font-family: "Cardo italic", serif;
+    src: url("../police/Cardo-Italic.ttf");
+}
+body{
+    font-family: "Cardo regular", serif;
+    font-size: 1.8rem;
+    background-color: rgb(246,246,246);
+}
+/* Disposition des blocs */
+header, main, section, footer{
+    width: 100vw;
+    max-width: 100%;
+}
+header{
+    padding: 1rem 0 0 2rem;
+}
+section,footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    padding: 2rem;
+}
+/* Liens */
+a{
+    text-decoration: none;
+    color: rgba(229, 9, 1, 1);
+    font-weight: bolder;
+}
+/* Titres */
+h1, h2{
+    font-family: "Cardo bold";
+    color: rgba(229, 9, 1, 1);
+}
+h2{
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/* BOUTON ASCENSEUR */
+#button-top {
+    display: none; 
+    position: fixed;
+    bottom: 10%; 
+    right: 3%;
+    z-index: 100; /* Pas de chevauchement */
+    cursor: pointer; 
+}  
+.fa-chevron-circle-up{
+    color: rgba(229, 9, 1, 1);
+    font-size: 5rem;
+}
+
+/* ACCUEIL */
+header{
+    position: relative;
+    background: url(../images/photo\ accueil.png) no-repeat center/ cover;
+    height: 100vh;
+}
+header h2{
+    display:none;
+}
+/* Menu */
+.navbar-links{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navbar-link{
+    padding-right: 4rem;
+}
+.navbar-link > a:hover{
+    color: black;
+}
+.burger{
+    display: none;
+}
+
+/* Titre */
+h1{
+    position:absolute;
+    top:20%;
+    font-size: 11rem;
+    color: rgba(229, 9, 1, 1);
+}
+h1 span{
+    position:absolute;
+    top:20%;
+    left: 30%;
+    font-size: 9.6rem; 
+}
+
+/* SYNOPSIS */
+#synopsis p{
+    text-align: justify;
+}
+
+/* PERSONNAGES */
+#personnages{
+    align-items: center;
+    justify-content: center;
+}
+td{
+    border: 0.1rem solid black;
+}
+.portrait{
+    width:18rem;
+    height:18rem;
+}
+.nomPerso{
+    text-align: center;
+    font-weight: bold;
+}
+.descriptionPerso{
+    padding: 0.5rem;
+}
+
+/* SAISONS */
+#saisons{
+    background: url("../images/photo\ groupe.png") no-repeat center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#saisons h2{
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.4rem black;
+    margin-bottom: 10rem;  
+}
+/* Captures vidéo */
+.captures{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+figcaption{
+    color:white;
+    font-weight:bolder;
+    text-shadow: 0.2rem 0.2rem 0.4rem black;  
+}
+iframe{
+    width: 21rem;
+    max-width: 100%;
+    height: 16rem;
+    border:0.3rem solid rgba(229, 9, 1, 1);
+}
+
+/* CONTACT */
+#contact{
+    justify-content: center;
+    align-items: center;
+}
+#contact h2{
+    padding-top:0;
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+}
+/* Formulaire */
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 40rem;
+}
+input,textarea{
+    width: 100%;
+}
+.nom,.mail, .envoi{
+    height: 3.6rem ;
+}
+.envoi{
+    width:  10rem;
+    border:none;
+    border-radius: 2rem;
+    box-shadow: 0.05rem 0.05rem 0.25rem black;
+    color: rgba(229, 9, 1, 1);
+    cursor: pointer;
+    background: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.envoi:active{
+    box-shadow: 0.05rem 0.05rem 0.25rem rgba(229, 9, 1, 1);
+}
+
+/* FOOTER */
+footer{
+    background: rgb(5,1,28);
+    margin-bottom: 2.5rem;
+}
+.copyright{
+    color:white;
+    margin-bottom: 2rem;
+}
+footer a:hover{
+    color:white;
+}
+
+/************** MEDIA QUERIES **************/
+
+@media screen and (max-width: 768px){    
+    /* Navbar et menu burger */
+    .navbar{
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding-left:1rem;
+    }
+    .navbar-links { 
+        overflow:hidden;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        width:0;
+        height: 88vh;
+        position:absolute;
+        top: 12vh;
+        right:0;     
+        background: white;
+        transform: translateX(110%);
+        transition: all .5s ease-in-out;
+        z-index: 100;
+    }
+    .show-nav .navbar-links {     
+        width:100vw;    
+        transform: translateX(0);
+    } 
+    .navbar-link {    
+        transform: translateX(101%);
+        transition: all .5s ease-in-out;
+        padding:0;
+    }    
+    .show-nav .navbar-link  {        
+        transform: translateX(0);    
+    }
+    .navbar-link > a {
+        display:block;
+        font-size: 1.6rem;
+        color: rgba(229, 9, 1, 1);
+        text-align: center;  
+        transition: all .4s ease-in-out;
+    }
+    .navbar-link > a:hover {
+        padding-left:2rem;
+        letter-spacing:0.5rem;
+    } 
+    .burger {
+        display:block;
+        position:relative;
+        padding:0;
+        width:4.5rem;
+        height:4.5rem;
+        border:none;
+        background:transparent;
+        cursor:pointer;
+    }
+    .bar{
+        display:block;    
+        width:4.5rem;
+        height:0.4rem;  
+        border-radius:0.3rem;
+        background:rgba(229, 9, 1, 1); 
+        transition: all .5s ease-in-out;  
+    }
+    .bar::before, .bar::after {
+        content:"";
+        width:4.5rem;
+        height:0.4rem;
+        position:absolute; 
+        left:0;  
+        background: rgba(229, 9, 1, 1); 
+        border-radius:0.3rem;    
+        transition: all .5s ease-in-out;
+    }
+    .bar::before {
+        transform:translateY(-1.2rem)
+    }
+    .bar::after {
+        transform:translateY(1.2rem)
+    }
+    .show-nav .bar {
+        width:0;
+        background:transparent;    
+    }
+    .show-nav .bar::before {
+        transform:rotate(45deg);
+    }
+    .show-nav .bar::after {
+        transform:rotate(-45deg);
+    }
+    /* Titres */
+    h1{
+        font-size: 4.5rem;
+        top:50%;
+        left: 4%;
+        line-height: 1.7;
+    }
+    h1 span{
+        font-size: 3rem;
+    }
+    #saisons h2{
+        margin-bottom: 2rem; 
+    }    
+    /* Formulaire de contact */
+    form{
+        width: 100%;        
+    }
+}
+
+@media screen and (max-width:1023px) {
+    /* Tableau de Personnages */
+    tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    td {
+        margin: 0.5rem;
+    }    
+    .nomPerso {
+        line-height: 1.6;
+        text-align: center;
+        border: none;
+        border-bottom: 0.4rem solid rgba(229, 9, 1, 1);
+    }
+    .descriptionPerso {
+        width: 70%;
+        text-align: center;
+    }
+    .portrait, .descriptionPerso{
+        border:none;
+    }       
+}
+
+@media only screen and (max-width: 1140px) {    
+    /* Header */
+    header{
+        padding: 0rem 0 0 1rem;
+        background: url("../images/header-bg-mob.jpg") no-repeat center/cover;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width:1150px){
+   #saisons{
+        height:auto;
+   }    
+    .captures{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    iframe{
+        margin-right: 1rem;
+    }
+}
