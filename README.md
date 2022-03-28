@@ -1,4 +1,5 @@
 # Ma série préférée
+A website on my favorite TV series
 
 ## https://jesselessa.github.io/ma-serie-prefereree/
 
